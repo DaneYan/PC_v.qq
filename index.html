@@ -2,470 +2,558 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>腾讯视频-中国领先的在线视频媒体平台,海量高清视频在线观看</title>
+    <link rel="stylesheet" href="css/css.css">
     <style type="text/css">
         * {
             margin: 0;
             padding: 0;
             list-style: none;
-            text-align: center;
-            font-family: Helvetica, sans-serif, microsoft yahei, simsun;
         }
 
-        ul, li, img, a {
-            display: block;
-        }
-
-        #main1, #main2 {
+        #top {
             width: 100%;
+            background-color: white;
+            position: fixed;
         }
 
-        #main2 .outer {
+        .head {
             width: 1240px;
-            height: 220px;
+            height: 77px;
+            margin: 0 auto;
+            background: url("img/logo.png") no-repeat;
+            background-position: 0 -55px;
+            position: relative;
+        }
+
+        .bottom {
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #23d8ff, #00fe00, #a9c4ff);
+            box-;
+        }
+
+        .banner1 {
+            width: 1240px;
+            height: 44px;
             margin: auto;
+            background-color: #fff;
 
         }
 
-        #main2 .outer .top {
-            width: 1240px;
-            height: 40px;
-            position: relative;
-
+        .banner2 {
+            width: 100%;
+            height: 44px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: fixed;
+            top: 124px;
+            z-index: 10;
+            display: none;
         }
 
-        #main2 .outer .bottom {
-            width: 1240px;
-            height: 178px;
-            position: relative;
-
-        }
-
-        #main2 .outer .top h2 {
-            width: 64px;
-            height: 40px;
-            line-height: 40px;
-            color: #2a2a2a;
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        #main2 .outer .top ul {
-            height: 40px;
-            line-height: 40px;
-            color: #2a2a2a;
-            position: absolute;
-            left: 65px;
-        }
-
-        #main2 .outer .top ul li {
-            height: 40px;
-            padding: 0 10px;
-            line-height: 40px;
-            color: #2a2a2a;
-            float: left;
-            font-family: Helvetica, sans-serif, microsoft yahei, simsun;
-            text-align: end;
-            font-size: 14px;
-        }
-
-        #main2 .outer .top ul li:hover {
-            cursor: pointer;
-            color: #ffa213;
-        }
-
-        #main2 .outer .top ul span {
+        #top .head li {
             display: block;
             float: left;
-            margin-top: 13px;
-            width: 1px;
-            height: 15px;
-            background-color: #bcbcbc;
         }
 
-        #main2 .outer .bottom .left {
-            width: 400px;
-            height: 160px;
-            position: absolute;
-        }
-
-        #main2 .outer .bottom .left img {
-            width: 220px;
-            height: 160px;
-            position: absolute;
-        }
-
-        #main2 .outer .bottom .left div {
-            width: 180px;
-            height: 160px;
-            position: absolute;
-            left: 220px;
-            background-color: #ededed;
-
-        }
-
-        #main2 .outer .bottom .left div h4 {
-            margin-top: 23px;
-            margin-left: 18px;
-            font-size: 14px;
-            font-weight: 300;
-            text-align: left;
-        }
-
-        #main2 .outer .bottom .left div p {
-            margin-top: 14px;
-            font-size: 12px;
-            color: #666;
-        }
-
-        #main2 .outer .bottom .right {
-            width: 840px;
-            height: 160px;
-            position: absolute;
-            left: 420px;
-        }
-
-        #main2 .outer .bottom .right ul {
-            width: 840px;
-            height: 160px;
-            position: absolute;
-        }
-
-        #main2 .outer .bottom .right ul li {
-            width: 190px;
-            height: 160px;
-            float: left;
-            padding: 5px 5px 0 5px;
-
-        }
-
-        #main2 .outer .bottom .right ul li:hover {
-            background-color: #ededed;
-            animation: mymove 1s;
-            /*Safari 和 Chrome:*/
-            -webkit-animation: mymove 1s;
-
-        }
-
-        @keyframes mymove {
-            from {
-                background-color: rgba(237, 237, 237, 0);
-            }
-            to {
-                background-color: rgba(237, 237, 237, 1);
-            }
-        }
-
-        /*Safari 和 Chrome:*/
-        @-webkit-keyframes mymove {
-            from {
-                background-color: rgba(237, 237, 237, 0);
-            }
-            to {
-                background-color: rgba(237, 237, 237, 1);
-            }
-        }
-
-        #main2 .outer .bottom .right ul li h4 {
-            font-size: 14px;
-            font-weight: normal;
-            margin-top: 5px;
-            text-align: left;
-
-        }
-
-        #main2 .outer .bottom .right ul li p {
-            font-size: 12px;
-            font-weight: normal;
-            margin-top: 2px;
-            text-align: left;
-            color: #999;
-
-        }
-
-        #main2 .outer .bottom .right ul li h4:hover {
-            color: #ff7800;
-            cursor: pointer;
-
-        }
-
-        #main1 .outer {
-            width: 1240px;
-            height: 100px;
-            margin: auto;
-            -background-color: #0cc3fa;
+        #top .head li:nth-child(1) {
+            width: 210px;
+            height: 60px;
             overflow: hidden;
-
         }
 
-        #main1 .outer .inner {
-            width: 2000px;
-            height: 100px;
-            position: relative;
+        #top .head li:nth-child(1) > img {
+            overflow: hidden;
+            margin-top: 8px;
         }
 
-        #main1 .outer .inner li:nth-child(odd) {
-            width: 248px;
-            height: 88px;
-            margin-top: 2px;
-            float: left;
-            background-color: #0cf93e;
-
-        }
-
-        #main1 .outer .inner li:nth-child(odd):hover + li {
-            width: 744px;
-            animation: mymove2 2s;
-            /*Safari 和 Chrome:*/
-            -webkit-animation: mymove2 2s;
-
-        }
-
-        @keyframes mymove2 {
-            from {
-                width: 0;
-            }
-            to {
-                width: 744px;
-            }
-        }
-
-        /*Safari 和 Chrome:*/
-        @-webkit-keyframes mymove2 {
-            from {
-                width: 0;
-            }
-            to {
-                width: 744px;
-            }
-        }
-
-        #main1 .outer .inner li:nth-child(even) {
-            width: 0;
+        #top .head li:nth-child(2) {
+            width: 100px;
             height: 80px;
-            margin-top: 10px;
+        }
+
+        #top .head li:nth-child(2) > img {
+            width: 120px;
+            height: 56px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        #top .head > ul > li:nth-child(3) {
+            width: 520px;
+            height: 48px;
+            position: absolute;
+            top: 16px;
+            left: 360px;
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #top .head li:nth-child(3) > button {
+            width: 90px;
+            height: 46px;
+            background-color: #ff5d00;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        #top .head li:nth-child(3) > input {
+            width: 430px;
+            height: 43px;
+            background: url("img/sprite_search.png");
+            background-position: 0 -55px;
+
+        }
+
+        #top .head li:nth-child(3) > i {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url("img/sprite_search.png");
+            background-position: 0 -205px;
+            position: absolute;
+            left: 10px;
+            top: 16px;
+
+        }
+
+        #top .head > ul > li:nth-child(4) {
+            width: 171px;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            left: 1025px;
+        }
+
+        #top .head > ul > li:nth-child(4) > ul > li > * {
+            margin: 0 auto;
+        }
+
+        #top .head li:nth-child(4) > ul > li {
+            display: block;
             float: left;
+            margin: 0 auto;
+        }
+
+        #top .head li:nth-child(4) > ul > li > .tubiao {
+            width: 26px;
+            height: 26px;
+            background: url("img/sprite_common.png");
+        }
+
+        #top .head li:nth-child(4) > ul > li > p {
+            width: 32px;
+
+        }
+
+        #top .head li:nth-child(4) > ul > li:nth-child(odd) {
+            width: 56px;
+            height: 43px;
+
+        }
+
+        #top .head li:nth-child(4) > ul > li:nth-child(even) {
+            width: 1px;
+            height: 26px;
+            background: linear-gradient(top, rgba(252, 252, 252, 1) 0, rgba(232, 232, 232, 1) 50%, rgba(252, 252, 252, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(252, 252, 252, 1) 0, rgba(232, 232, 232, 1) 50%, rgba(252, 252, 252, 1) 100%);
+        }
+
+        #top .head > ul > li:nth-child(5) {
+            width: 43px;
+            height: 43px;
+            position: absolute;
+            top: 20px;
+            left: 1205px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        ul.borderLeft {
+            height: 17px;
+            border-right: 1px solid grey;
+            margin: 10px 0;
+            float: left;
+        }
+
+        ul.last {
+            height: 17px;
+            margin: 10px 0;
+            float: left;
+        }
+
+        div.banner1 > ul {
+            cursor: pointer;
+        }
+
+        div.banner1 > ul > li {
+            display: block;
+            float: left;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        div.outBanner {
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 5px 5px -4px #000;
+        }
+
+        #lunbo {
+            position: absolute;
+            top: 90px;
+            width: 100%;
+            height: 480px;
+            z-index: -10;
+
+        }
+
+        #lunbo > ul {
+            width: 1400%;
+            height: 100%;
+            float: left;
+            position: absolute;
+        }
+
+        #lunbo > ul > li {
+            display: block;
+            float: left;
+            width: 7.1428%;
+            height: 100%;
+            background-color: #00A5FF;
+            background: url("img/133856043.jpg");
+        }
+
+        #lunbo > ul > li:nth-child(even) {
+            background-color: lightpink;
+            background: url("img/0 (1).jpg");
+        }
+
+        #lunbo>div{
+            width: 1000px;
+            height: 64px;
+            position: absolute;
+            bottom: 34px;
+            left: 50%;
+            margin-left: -500px;
+            background-color: rgba(33,33,33,0.4);
+        }
+        #lunbo>div>h2{
+            width: 260px;
+            height: 50px;
+            margin: 7px 10px;
+            font-size: 18px;
+            color: white;
+        }
+        #lunbo>div>div{
+            width: 637px;
+            height: 50px;
+            position: absolute;
+            right: 54px;
+            top: 7px;
+            overflow: hidden;
+        }
+        #lunbo>div>div>.ul_banner{
+            width: 1275px;
+            height: 50px;
+
+        }
+        #lunbo>div>div>.ul_banner>li{
+            width: 85px;
+            height: 50px;
+            margin: 0 3px;
+            display: block;
+            float: left;
+            -background-color: #facc8a;
+            box-sizing: border-box;
+        }
+        #lunbo>div>a.left{
+            position: absolute;
+            display: block;
+            width: 34px;
+            height: 50px;
+            line-height: 50px;
+            left: 270px;
+            top:7px;
+            background-color: #9a9a9a;
+            font-size: 50px;
+            color: black;
+            text-decoration:none;
+        }
+        /*a:hover,a:active,a:focus,a{
+            font-size: large;
+            color: white;
+        }*/
+        #lunbo>div>a.right{
+            position: absolute;
+            display: block;
+            width: 34px;
+            height: 50px;
+            line-height: 50px;
+            right: 14px;
+            background-color: #9a9a9a;
+            font-size: 50px;
+            color: black;
+            text-decoration:none;
+            top:7px;
+        }
+
+        #lunbo>div>div>.ul_banner>li:nth-child(odd){
             background-color: #f9f940;
-
         }
-
-        #main1 .outer .inner li:nth-child(even):hover {
-            width: 744px;
-        }
-
-
-        #main0{
-            height: 105px;
-            margin-bottom: 100px;
-        }
-        #main0 .outer .inner{
-            width: 1250px;
-            height: 105px;
-            margin: 0 auto;
-            overflow: hidden;
-
-        }
-        #main0 .outer .inner ul{
-            width: 4975px;
-            height: 105px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        #main0 .outer .inner ul li{
-            display: block;
-            height: 105px;
-            float: left;
-        }
-        #main0 .outer .inner ul li a{
-            display: block;
-        }
-        #main0 .outer .inner ul>li>a:nth-child(1){
-            width: 250px;
-            height: 105px;
-            float: left;
-        }
-        #main0 .outer .inner ul>li>a:nth-child(2){
-            width: 0;
-            float: left;
-            height: 95px;
-            margin-top: 10px;
+        #lunbo>div>div>.ul_banner>li:nth-child(even){
+            background-color: #ff4941;
         }
 
 
     </style>
+
+
 </head>
 <body>
+<div id="top">
 
-<div id="main0">
-    <div class="outer">
-        <div class="inner">
-            <ul>
-                <li>
-                    <a href="javascript:;" style="background: url('img/滑动1.1.jpg')"></a>
-                    <a href="javascript:;" style="background: url('img/滑动1.jpg')"></a>
-
-                    <!--<div style='background:url("img/滑动1.jpg");background-size:100% 100%'></div>-->
-                </li>
-                <li>
-                    <!--<img src='img/滑动2.2.jpg'>
-                    <img src='img/滑动2.jpg'>-->
-                    <a href="javascript:;" style="background: url('img/滑动2.2.jpg')"></a>
-                    <a href="javascript:;" style="background: url('img/滑动2.jpg')"></a>
-                </li>
-                <li>
-                    <a href="javascript:;" style="background: url('img/滑动3.3.jpg')"></a>
-                    <a href="javascript:;" style="background: url('img/滑动3.jpg')"></a>
-                </li>
-                <li>
-                    <a href="javascript:;" style="background: url('img/滑动4.4.jpg')"></a>
-                    <a href="javascript:;" style="background: url('img/滑动4.jpg')"></a>
-                </li>
-                <li>
-                    <a href="javascript:;" style="background: url('img/滑动5.5.jpg')"></a>
-                    <a href="javascript:;" style="background: url('img/滑动5.jpg')"></a>
-                </li>
-            </ul>
-
-
-
-
-
-        </div>
-    </div>
-</div>
-
-<div id="main2">
-    <div class="outer">
-        <div class="top">
-            <h2>NBA</h2>
-            <ul>
-                <li>巨星城记</li>
-                <span></span>
-                <li>NBA神迹</li>
-                <span></span>
-                <li>篮球星播客</li>
-                <span></span>
-                <li>看球听歌</li>
-                <span></span>
-                <li>囧囧NBA</li>
-                <span></span>
-                <li>NBA球星一百零八将</li>
-            </ul>
-        </div>
-        <div class="bottom">
-            <div class="left">
+    <div class="head">
+        <ul>
+            <li>
+                <img src="img/logo.png" alt="">
+            </li>
+            <li>
                 <img src="img/0.jpg" alt="">
-                <div>
-                    <h4>全景NBA</h4>
-                    <p>细数伤病毁灭的季后赛之路</p>
-                </div>
-            </div>
-            <div class="right">
+            </li>
+            <li>
+                <i></i>
+                <input type="text" value="          我的奇妙男友">
+                <button type="submit" id="sou">全网搜</button>
+            </li>
+            <li>
                 <ul>
                     <li>
-                        <img src="img/0 (1).jpg" alt="">
-                        <h4>NBA经典回顾</h4>
-                        <p>史上最牛抢七 巴克利G7砍44分</p>
+                        <div class="tubiao"></div>
+                        <p>看过</p>
                     </li>
+                    <li></li>
                     <li>
-                        <img src="img/0 (2).jpg" alt="">
-                        <h4>时尚NBA</h4>
-                        <p>皮蓬娇妻性感力压韦德女友</p>
+                        <div class="tubiao" style="background-position: -30px 0;"></div>
+                        <p>看单</p>
                     </li>
+                    <li></li>
                     <li>
-                        <img src="img/0 (3).jpg" alt="">
-                        <h4>《城记：孟菲斯灰熊》</h4>
-                        <p>破败孟菲斯因打不死的双雄骄傲</p>
+                        <div class="tubiao" style="background-position: -60px 0;"></div>
+                        <p>上传</p>
                     </li>
-                    <li>
-                        <img src="img/0 (4).jpg" alt="">
-                        <h4>科比告别赛季8大难忘镜头</h4>
-                        <p>全明星绝响曼巴笑看风轻云淡</p>
-                    </li>
+                    <li></li>
                 </ul>
-            </div>
+
+            </li>
+            <li>
+                <img src="img/default_avatar.png" alt="">
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="bottom">
+    </div>
+
+    <div class="outBanner">
+        <div class="banner1">
+            <ul class="borderLeft">
+                <li>电视剧</li>
+                <li>电影</li>
+                <li>综艺</li>
+            </ul>
+            <ul class="borderLeft">
+                <li>娱乐</li>
+                <li>音乐</li>
+                <li>演唱会</li>
+                <li>动漫</li>
+                <li>游戏</li>
+            </ul>
+            <ul class="borderLeft">
+                <li>好莱坞</li>
+                <li>美剧</li>
+                <li>纪录片</li>
+            </ul>
+            <ul class="borderLeft">
+                <li>新闻</li>
+                <li>时尚</li>
+                <li>体育</li>
+                <li>NBA</li>
+                <li>汽车</li>
+            </ul>
+            <ul class="borderLeft">
+                <li>搞笑</li>
+                <li>微电影</li>
+                <li>V+</li>
+                <li>拍客</li>
+            </ul>
+            <ul class="last">
+                <li>少儿</li>
+                <li>更多</li>
+            </ul>
+
         </div>
     </div>
+
 </div>
+<div class="banner2">
+
+</div>
+
+<div id="lunbo">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div>
+        <h2>《我的特工爷爷》 洪金宝刘德华陷黑帮斗争</h2>
+        <div>
+            <ul class="ul_banner">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li style="background-color: #00A5FF"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+            </ul>
+        </div>
+        <a href="javascript:;" class="left">&lt;</a>
+        <a href="javascript:;" class="right">&gt;</a>
+    </div>
+</div>
+<div id="content"></div>
+
+
 </body>
 </html>
 
-<script src="jquery-1.9.1.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
 <script>
-    var lis = document.querySelectorAll("#main1 .outer .inner li");
-    var inner = document.querySelectorAll("#main1 .outer .inner")[0];
-    
+    $(function () {
+        //获取元素
 
-    document.onmouseover = function (e) {
-        e = e || window.event;
-        e.target = e.target || e.srcElement;
-        //console.log(e.target);
-        [].forEach.call(lis, function (item, index, lis) {
-            item.YZXindex = index;
-            if(!(index%2==0)){
-                item.YZX = true;
+        var oTop = $("#top");
+
+
+        //当文档卷90时隐藏top
+        document.body.onscroll = function () {
+            if (document.body.scrollTop > 90) {
+                oTop.animate({height: 0}, 400);
+                console.log(oTop.style.height);
+            } else {
+                console.log(oTop.height);
+                oTop.animate({height: 0}, 800)
             }
-            //console.dir(item);
-        });
+            //console.log(document.body.scrollTop);
+        }
 
-        if (e.target.YZXindex % 2 == 0||e.target.YZX) {
-            if(e.target.YZX){//长的 1,3,5,7
-                $(inner).animate({"left":-(e.target.YZXindex-1) / 2 * 248},"fast","swing");
+
+        //轮播
+        var oUl = $("#lunbo>ul")[0];
+        var oLis = $("#lunbo>ul")[0].children;
+
+        var num = 0;
+        console.log(oLis);
+        window.setInterval(function () {
+            num++;
+            if (num > oLis.length) {
+                num = 0;
+            }
+            $(oLis).hide();
+            borderColor(num);
+            $(oLis[num]).fadeIn(2000);
+        }, 3000);
+
+
+        var $lunbo_lis = $("#lunbo>div>div>.ul_banner>li");
+        console.log($lunbo_lis);
+
+        function borderColor(n){
+            $lunbo_lis.css("border","");
+            $lunbo_lis.eq(n).css("border","3px solid orange");
+        }
+
+
+        //左右点击
+        var flag = true;
+        var $click_la = $("#lunbo>div>a.left");
+        var $click_ra = $("#lunbo>div>a.right");
+        $click_la.on("click",function(e){
+            if(flag){
+                flag = false;
+                var $lunbo_ul = $("#lunbo>div>div>.ul_banner");
+                $lunbo_ul.css("marginLeft",-637);
+
             }else {
-                $(inner).animate({"left":-(e.target.YZXindex) / 2 * 248},"fast","swing");
+                flag = true;
+                var $lunbo_ul = $("#lunbo>div>div>.ul_banner");
+                $lunbo_ul.css("marginLeft",0);
             }
-            //$(inner).animate({"left":-e.target.YZXindex / 2 * 248});
-            //inner.style.left = -e.target.YZXindex / 2 * 248 + "px";
-        }else {
-            $(inner).animate({"left":0});
-        }
 
-    }
-
-
-    //console.log($("#main0 .outer .inner ul>li>a"));
-
-    var $a = $("#main0 .outer .inner ul>li>a");
-    var $aji = $("#main0 .outer .inner ul>li>a:even");
-    var $aou = $("#main0 .outer .inner ul>li>a:odd");
-    var $lis = $("#main0 .outer .inner ul>li");
-    var ul = $("#main0 .outer .inner ul")[0];
-    console.log($a);
-
-    //给每个a加编号
-    for(var i = 0;i<$a.length;i++){
-        $a[i].index = i;
-    }
-    $aji.mouseenter(function(e){
-        //console.log("2");
-        $(this).next().animate({
-            width:744
         });
-        //console.log(this.index);0,2,4
-        if(this.index/2==4){
-            $(ul).animate({
-                marginLeft: -3 * 250
-            });
-        }else {
-            $(ul).animate({
-                marginLeft: -this.index / 2 * 250
-            });
-        }
+
+        $click_ra.on("click",function(e){
+            if(flag){
+                flag = false;
+                var $lunbo_ul = $("#lunbo>div>div>.ul_banner");
+                $lunbo_ul.css("marginLeft",-637);
+
+            }else {
+                flag = true;
+                var $lunbo_ul = $("#lunbo>div>div>.ul_banner");
+                $lunbo_ul.css("marginLeft",0);
+            }
+        });
+
+
+        $lunbo_lis.on("mouseover",function(e){
+            num = $(this).index();
+            $(oLis).hide();
+            borderColor(num);
+            $(oLis[num]).fadeIn(2000);
+//            console.log($(this).index());
+        });
+        $lunbo_lis.on("mouseout",function(e){
+
+        });
+
+
+
+
+
+
+
 
     });
 
 
-    $lis.mouseleave(function(e){
-
-        $aou.animate({
-            width:0
-        });
-        $(ul).animate({
-            marginLeft:0
-        });
-
-    })
 </script>
+
